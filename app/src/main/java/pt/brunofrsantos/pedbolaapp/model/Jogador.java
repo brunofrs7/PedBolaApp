@@ -1,9 +1,7 @@
-package pt.brunofrsantos.pedbolaapp;
+package pt.brunofrsantos.pedbolaapp.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import java.io.Serializable;
 
 public class Jogador implements Parcelable {
 
@@ -28,6 +26,24 @@ public class Jogador implements Parcelable {
         this.telefone = telefone;
         njogos = 0;
     }
+
+    protected Jogador(Parcel in) {
+        nome = in.readString();
+        telefone = in.readString();
+        njogos = in.readInt();
+    }
+
+    public static final Creator<Jogador> CREATOR = new Creator<Jogador>() {
+        @Override
+        public Jogador createFromParcel(Parcel in) {
+            return new Jogador(in);
+        }
+
+        @Override
+        public Jogador[] newArray(int size) {
+            return new Jogador[size];
+        }
+    };
 
     public String getNome() {
         return nome;

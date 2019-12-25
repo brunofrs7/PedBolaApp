@@ -1,4 +1,4 @@
-package pt.brunofrsantos.pedbolaapp;
+package pt.brunofrsantos.pedbolaapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,13 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+
+import pt.brunofrsantos.pedbolaapp.adapter.JogadorAdapter;
+import pt.brunofrsantos.pedbolaapp.R;
+import pt.brunofrsantos.pedbolaapp.model.Jogador;
 
 public class VerJogadorActivity extends AppCompatActivity {
 

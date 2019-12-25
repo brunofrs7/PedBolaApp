@@ -1,10 +1,12 @@
-package pt.brunofrsantos.pedbolaapp;
+package pt.brunofrsantos.pedbolaapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import pt.brunofrsantos.pedbolaapp.R;
 
 public class MainActivity extends AppCompatActivity {
 

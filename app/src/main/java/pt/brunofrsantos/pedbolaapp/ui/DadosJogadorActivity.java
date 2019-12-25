@@ -1,4 +1,4 @@
-package pt.brunofrsantos.pedbolaapp;
+package pt.brunofrsantos.pedbolaapp.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import pt.brunofrsantos.pedbolaapp.R;
 
 public class DadosJogadorActivity extends AppCompatActivity {
 

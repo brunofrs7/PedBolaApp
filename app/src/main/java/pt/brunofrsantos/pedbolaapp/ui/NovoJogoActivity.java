@@ -1,4 +1,4 @@
-package pt.brunofrsantos.pedbolaapp;
+package pt.brunofrsantos.pedbolaapp.ui;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -13,11 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+
+import pt.brunofrsantos.pedbolaapp.R;
 
 public class NovoJogoActivity extends AppCompatActivity {
 

@@ -9,13 +9,13 @@
         android:roundIcon="@drawable/icone_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListaJogadoresSelecionaveisActivity" />
-        <activity android:name=".DadosJogadorActivity" />
-        <activity android:name=".VerJogadorActivity" />
-        <activity android:name=".NovoJogadorActivity" />
-        <activity android:name=".NovoJogoActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.ListaJogadoresSelecionaveisActivity" />
+        <activity android:name=".ui.DadosJogadorActivity" />
+        <activity android:name=".ui.VerJogadorActivity" />
+        <activity android:name=".ui.NovoJogadorActivity" />
+        <activity android:name=".ui.NovoJogoActivity" />
+        <activity android:name=".ui.MenuActivity" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

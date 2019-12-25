@@ -1,4 +1,4 @@
-package pt.brunofrsantos.pedbolaapp;
+package pt.brunofrsantos.pedbolaapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +18,10 @@ import com.google.firebase.firestore.Query;
 
 import java.lang.String;
 import java.util.ArrayList;
+
+import pt.brunofrsantos.pedbolaapp.adapter.JogadorSelAdapter;
+import pt.brunofrsantos.pedbolaapp.R;
+import pt.brunofrsantos.pedbolaapp.model.Jogador;
 
 
 public class ListaJogadoresSelecionaveisActivity extends AppCompatActivity {

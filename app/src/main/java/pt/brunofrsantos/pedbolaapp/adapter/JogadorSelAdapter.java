@@ -1,8 +1,9 @@
-package pt.brunofrsantos.pedbolaapp;
+package pt.brunofrsantos.pedbolaapp.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckedTextView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,16 +13,19 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.DocumentSnapshot;
 
-public class JogadorAdapter extends FirestoreRecyclerAdapter<Jogador, JogadorAdapter.JogadorHolder> {
+import pt.brunofrsantos.pedbolaapp.R;
+import pt.brunofrsantos.pedbolaapp.model.Jogador;
+
+public class JogadorSelAdapter extends FirestoreRecyclerAdapter<Jogador, JogadorSelAdapter.JogadorSelHolder> {
 
     private OnItemClickListener listener;
 
-    public JogadorAdapter(@NonNull FirestoreRecyclerOptions<Jogador> options) {
+    public JogadorSelAdapter(@NonNull FirestoreRecyclerOptions<Jogador> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull JogadorHolder holder, int position, @NonNull Jogador model) {
+    protected void onBindViewHolder(@NonNull JogadorSelHolder holder, int position, @NonNull Jogador model) {
         holder.tv_rowJogador_nome.setText(model.getNome());
         holder.tv_rowJogador_njogos.setText("Jogos: " + String.valueOf(model.getNjogos()));
         holder.tv_rowJogador_telefone.setText(model.getTelefone());
@@ -29,29 +33,35 @@ public class JogadorAdapter extends FirestoreRecyclerAdapter<Jogador, JogadorAda
 
     @NonNull
     @Override
-    public JogadorHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.jogador_item, parent, false);
-        return new JogadorHolder(v);
+    public JogadorSelHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.jogador_sel_item, parent, false);
+        return new JogadorSelHolder(v);
     }
 
-    class JogadorHolder extends RecyclerView.ViewHolder {
+    class JogadorSelHolder extends RecyclerView.ViewHolder {
 
         TextView tv_rowJogador_nome;
         TextView tv_rowJogador_telefone;
         TextView tv_rowJogador_njogos;
+        CheckedTextView mCheckedTextView;
 
-        public JogadorHolder(@NonNull View itemView) {
+
+        public JogadorSelHolder(@NonNull View itemView) {
             super(itemView);
             tv_rowJogador_nome = itemView.findViewById(R.id.tv_rowJogador_nome);
             tv_rowJogador_telefone = itemView.findViewById(R.id.tv_rowJogador_telefone);
             tv_rowJogador_njogos = itemView.findViewById(R.id.tv_rowJogador_njogos);
-
+            mCheckedTextView = itemView.findViewById(R.id.cb_rowJogadorSel);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION && listener != null) {
                         listener.onItemClick(getSnapshots().getSnapshot(position), position);
+                        if (mCheckedTextView.isChecked())
+                            mCheckedTextView.setChecked(false);
+                        else
+                            mCheckedTextView.setChecked(true);
                     }
                 }
             });

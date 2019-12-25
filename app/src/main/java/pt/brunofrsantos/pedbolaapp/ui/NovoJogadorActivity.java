@@ -1,4 +1,4 @@
-package pt.brunofrsantos.pedbolaapp;
+package pt.brunofrsantos.pedbolaapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import pt.brunofrsantos.pedbolaapp.R;
+import pt.brunofrsantos.pedbolaapp.model.Jogador;
 
 public class NovoJogadorActivity extends AppCompatActivity {
 
