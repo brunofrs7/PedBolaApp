@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fundo"
+    tools:context=".NovoJogadorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_novoJogador_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/branco"
+            android:gravity="center"
+            android:hint="Nome do jogador"
+            android:inputType="text"
+            android:textColor="@color/branco"
+            android:textColorHint="@color/cinza"/>
+
+        <EditText
+            android:id="@+id/et_novoJogador_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/branco"
+            android:gravity="center"
+            android:hint="Telefone do jogador"
+            android:inputType="text"
+            android:textColor="@color/branco"
+            android:textColorHint="@color/cinza"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_novoJogador_registar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:text="Registar"
+            app:strokeColor="@color/branco"
+            app:strokeWidth="2dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/copyright"
+        android:textColor="@color/branco" />
+</LinearLayout>

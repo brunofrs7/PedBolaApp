@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "708685214458",
+    "firebase_url": "https://pedbolaapp-82c29.firebaseio.com",
+    "project_id": "pedbolaapp-82c29",
+    "storage_bucket": "pedbolaapp-82c29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708685214458:android:fcadc863040ab33d5bcf43",
+        "android_client_info": {
+          "package_name": "pt.brunofrsantos.pedbolaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708685214458-rp30h0ugpevan4t3cf3nffobjkmt05bf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pt.brunofrsantos.pedbolaapp",
+            "certificate_hash": "19d77c86a17e1893db060af51b6e78a3941b4f21"
+          }
+        },
+        {
+          "client_id": "708685214458-8cd0c81b8msl4i12dol58n6vd466rgd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxIfz5_tZEh8WOwcHGzcO-JQy43kawqEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708685214458-8cd0c81b8msl4i12dol58n6vd466rgd0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

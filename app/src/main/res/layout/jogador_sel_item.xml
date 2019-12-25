@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardBackgroundColor="@color/card">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <CheckedTextView
+            android:id="@+id/cb_rowJogadorSel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:buttonTint="@color/branco"
+            android:checked="false"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableEnd="@null"
+            android:drawableRight="@null"
+            android:drawableTint="@color/branco"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/tv_rowJogador_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/tv_rowJogador_njogos"
+            android:layout_toEndOf="@id/cb_rowJogadorSel"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Nome do jogador"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/tv_rowJogador_njogos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:text="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/tv_rowJogador_telefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rowJogador_nome"
+            android:layout_toEndOf="@id/cb_rowJogadorSel"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Telefone"
+            android:textColor="@color/branco" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
